@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Content Manager - JdB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"/>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+
+    var CategoriesControl = createClass({
+      handleChange: function (e) {
+        this.props.onChange(e.target.value.split(",").map((e) => e.trim()));
+      },
+
+      render: function() {
+        var value = this.props.value;
+        return h("input", {
+          type: "text",
+          value: value ? value.join(", ") : "",
+          onChange: this.handleChange
+        });
+      }
+    });
+
+    var CategoriesPreview = createClass({
+      render: function() {
+        return h("ul", {},
+          this.props.value.map(function(val, index) {
+            return h("li", {key: index}, val);
+          })
+        );
+      }
+    });
+
+    CMS.registerWidget("categories", CategoriesControl, CategoriesPreview);
+  </script>
+</body>
+</html>

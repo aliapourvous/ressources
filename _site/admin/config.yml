@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: aliapourvous/aliapourvous
+  # Set to false to prevent transforming images in media gallery view
+  use_large_media_transforms_in_media_library: true
+
+media_folder: "assets/images/posts"
+
+collections:
+  - name: "blog"  # Used in routes, e.g., /admin/collections/blog
+    label: "Post" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    show_preview_links: true # Show Preview Links
+    preview_path: preview/{{year}}-{{month}}-{{day}}-{{slug}}_dev # Configuring preview paths
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Do not index", name: "noindex", widget: "boolean", default: false}
+      - {label: "Accept comments", name: "comments", widget: "boolean", default: true}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "Featured Image (Upload)", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image (URL)", name: "thumbnail", widget: "string", required: false}
+      - {label: "Featured text", name: "feature_text", widget: "markdown", required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Category", name: "category", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Meta image", name: "image", widget: "image", required: false}
+      - {label: "Theme color for Chrome (#cdcdcd)", name: "theme_color", widget: "string", required: false}
+      - {label: "Redirect from", name: "redirect_from", widget: "string", required: false}
+  - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Pages (BETA)" # Used in the UI, ie
+    label_singular: "Page" # Used in the UI, ie.: "New Post"
+    folder: "/pages" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Do not index", name: "noindex", widget: "boolean", default: false}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+      - {label: "Featured image", name: "feature_image", widget: "image", required: false}
+      - {label: "Feature text", name: "feature_text", widget: "markdown", required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Meta image", name: "image", widget: "image", required: false}
