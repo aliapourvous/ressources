@@ -1,0 +1,12 @@
+- name: Accueil
+  link: /
+  icon: <i class="fa fa-home" aria-hidden="true"></i>
+- name: Aliapourvous
+  link: https://aliapourvous.com
+  icon: <i class="fa fa-globe" aria-hidden="true"></i>
+# - name: Blog
+#   link: /blog
+#   icon: <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+- name: Staff
+  link: /staff
+  icon: <i class="fa fa-users" aria-hidden="true"></i>

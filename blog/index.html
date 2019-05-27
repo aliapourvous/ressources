@@ -1,0 +1,172 @@
+---
+layout: default
+title: Blog
+show_read_more_button: true
+thumbnail: /assets/images/archives-keys-mechanically-33130.jpg
+tag_cloud_limit: 3
+---
+
+<div class="thumbnail-as-bg">
+  <section class="mast">
+    <div class="grid">
+      <div class="mast__container jdb-margin-top">
+        <h1 class="mast__title font-effect-emboss jdb-center" itemprop="name headline">{{ page.title }}</h1>
+        <div class="page_number jdb-padding jdb-center">
+          Page: {{ paginator.page }} sur {{ paginator.total_pages }}
+        </div>
+        <p class="jdb-left-align" style="max-width:450px;margin:auto">Exploration de mes intérêts. <a class="s-link" href="#inscription">Abonnez-vous</a> à ma newsletter pour ne rien manquer.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% if paginator.posts.size > 0 %}
+  <section id="articles" class="posts jdb-content jdb-margin-top">
+    <div class="grid jdb-row-padding jdb-margin-bottom">
+      <div class="jdb-col l8 s12">
+        <!-- <h2 class="posts__title jdb-text-white">
+          <span>Articles récents</span>
+        </h2> -->
+        <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
+          {% for post in paginator.posts %}
+            {% include post-card.html %}
+          {% endfor %}
+        </div>
+
+        <div class="jdb-pagination jdb-bar jdb-center">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="jdb-btn">
+              <span class="pagination__text"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Précédent</span>
+            </a>
+          {% else %}
+            <span class="jdb-button previous jdb-disabled">Aucun précédent</span>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <em class="jdb-button jdb-theme">{{ page }}</em>
+            {% elsif page == 1 %}
+              <a class="jdb-button" href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+            {% else %}
+              <a class="jdb-button" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="jdb-button">
+              <span class="pagination__text">Suivant <i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+            </a>
+          {% else %}
+            <span class="jdb-button next jdb-disabled">Aucun suivant</span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="jdb-col l4">
+        <div class="jdb-dark-gray__">
+          <div class="jdb-container jdb-padding jdb-theme">
+            <h4><i class="fa fa-bullhorn" aria-hidden="true"></i> Publicité</h4>
+          </div>
+          <div class="jdb-container jdb-white">
+            <div class="jdb-container jdb-display-container jdb-light-grey jdb-section" style="height:200px; background-image:url({{ '/assets/images/no-image.png' | prepend: site.baseurl }});background-position:right; background-size:contain; background-repeat:no-repeat">
+              <span class="jdb-display-leftmiddle jdb-margin-left" style="max-width:140px">Aucune publicité pour le moment</span>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        {% include tag_widget.html %}
+        <hr/>
+        <div class="jdb-margin-bottom">
+          {% include newsletter.html class="jdb-white jdb-padding-small" %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="jdb-padding-32 jdb-white">
+    <p>Aucun article n'est encore posté sur ce blog. Veuillez revenir sur cette page plutard pour voir s'il y a du nouveau.</p>
+  </section>
+{% endif %}
+
+<section class="jdb-padding-32"></section>
+{% include wave.html color="#9e9e9e" %}
+
+<section class="jdb-padding-32 jdb-gray jdb-center jdb-margin-top" id="archives-link">
+  <div class="jdb-padding-16"></div>
+  <p>Vous pouvez retrouver tous mes articles de blog sur la page des archives</p>
+  <h2><a class="jdb-decoration-0" href="{{ '/archives' | prepend: site.baseurl }}">
+    Accéder aux archives <i class="fa fa-archive" aria-hidden="true"></i></a>
+  </h2>
+</section>
+
+<section class="jdb-padding-64 jdb-theme-d5 jdb-center">
+  <a class="jdb-xxlarge link" href="{{ '/contact' | prepend: site.baseurl }}">
+    <span class="cta__text">Contactez-moi</span>
+  </a>
+</section>
+
+
+{% comment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+<footer class="jdb-container jdb-padding-32 jdb-dark-grey">
+  <div class="jdb-row-padding">
+    <div class="jdb-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.jdbschools.com/jdbcss/default.asp" target="_blank">jdb.css</a></p>
+    </div>
+  
+    <div class="jdb-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="jdb-ul jdb-hoverable">
+        <li class="jdb-padding-16">
+          <img src="/jdbimages/workshop.jpg" class="jdb-left jdb-margin-right" style="width:50px">
+          <span class="jdb-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="jdb-padding-16">
+          <img src="/jdbimages/gondol.jpg" class="jdb-left jdb-margin-right" style="width:50px">
+          <span class="jdb-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="jdb-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="jdb-tag jdb-black jdb-margin-bottom">Travel</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">New York</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">London</span>
+        <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">IKEA</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">NORWAY</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">DIY</span>
+        <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Ideas</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Baby</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Family</span>
+        <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">News</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Clothing</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Shopping</span>
+        <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Sports</span> <span class="jdb-tag jdb-grey jdb-small jdb-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+
+
+  <style type="text/css">
+    .jdb-pagination a.jdb-button {border: 1px solid transparent}
+    .jdb-pagination a.jdb-button:hover {border-color: #ccc;box-shadow: none}
+    .jdb-pagination .jdb-button:not(a) {box-shadow: none}
+  </style>
+
+{% endcomment %}

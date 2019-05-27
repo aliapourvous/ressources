@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<div class="post {% if page.thumbnail %}thumbnail-as-bg{% endif %}">
+  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <section class="mast jdb-display-container {% if page.thumbnail == undefined %}jdb-theme{% endif %}" style="min-height:300px">
+      <div class="grid" style="position:initial">
+        <div class="mast__container">
+          <div class="mast__content jdb-display-bottomleft jdb-padding">
+            <h1 class="mast__title" itemprop="name headline">{{ page.title }}</h1>
+            <i class="fa fa-calendar" aria-hidden="true"></i> Publié le <time class="mast__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include date.html date=page.date day=true %}</time>{% if page.category %} dans <a class="jdb-monospace jdb-xlarge jdb-text-white" href="/archives#{{ page.category }}">{{ page.category }}</a>{% endif %}{% comment %}<br/>{% if page.last_modified_at %}<span class="mast__date">- Mis à jour le <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{% include date.html date=page.last_modified_at %}</span>{% endif %}{% endcomment %}<br/>{% include read_time.html %}<span class="jdb-hide-medium jdb-hide-small"> de lecture</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jdb-padding-32 jdb-white">
+      <div class="jdb-content jdb-padding">
+        <div id="markdown" itemprop="articleBody">
+          {{ content }}
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="jdb-clearfix"></div>
+
+  <div class="jdb-content jdb-padding" style="padding-bottom:0!important">
+    <hr/>
+    {% if page.tags.size > 0 %}
+      <div class="jdb-section" id="tags">
+        <span>{% if page.tags.size >= 1 %}Tags{% else %}Tag{% endif %} : </span>
+        {% for tag in page.tags %}
+          <a class="jdb-decoration-0" href="/{{ site.tag_page_dir }}/{{ tag }}/">
+            <code class="jdb-tag jdb-light-gray"><nobr>{{ tag }}</nobr></code>&nbsp;
+          </a>
+        {% endfor %}
+      </div>
+      <hr/>
+    {% endif %}
+    <div class="share-container jdb-row-padding">
+      <h4>Partager cet article sur :</h4>
+      <div class="jdb-third jdb-padding jdb-hover-light-gray">
+        <a class="share__link" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, '{{ page.title }}', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >
+          <i class="fa fa-facebook-official jdb-text-blue-gray" aria-hidden="true"></i><span> Facebook</span>
+        </a>
+      </div>
+
+      <div class="jdb-third jdb-padding jdb-hover-light-gray">
+        <a class="share__link" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, '{{ page.title }}', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter jdb-text-blue" aria-hidden="true"></i><span> Twitter</span>
+        </a>
+      </div>
+
+      <div class="jdb-third jdb-padding jdb-hover-light-gray">
+        <a class="share__link" href="mailto:?subject={{ page.title }}&amp;body=Jete un coup d'oeil sur ce site {{ site.url }}{{site.baseurl}}{{ page.url }}">
+          <i class="fa fa-envelope fa jdb-text-gray" aria-hidden="true"></i><span> Email</span>
+        </a>
+      </div>
+    </div>
+
+{% comment %}
+    {% if page.comments %}
+      {% include comments.html %}
+    {% endif %}
+{% endcomment %}
+  </div>
+
+  {% if page.previous.url or page.next.url %}
+    <div class="pagination">
+      {% if page.previous.url %}
+        <a class="pagination__link" href="{{ page.previous.url }}">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i> 
+          <span class="pagination__text jdb-margin-left"> {{ page.previous.title }}</span>
+        </a>
+      {% else %}
+        <span class="pagination__link jdb-theme-l4">
+          C'était le plus ancien article
+        </span>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a class="pagination__link" href="{{ page.next.url }}">
+          <span class="pagination__text jdb-margin-right"> {{ page.next.title }}</span> 
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        </a>
+      {% else %}
+        <span class="pagination__link jdb-theme-l4">
+          C'était le plus récent article
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+<div class="jdb-clearfix"></div>
+
+{% comment %}
+  <div class="jdb-hide-medium jdb-hide-small">
+    <section class="jdb-padding-32"></section>
+    {% include wave.html color="#f1f1f1" %}
+  </div>
+{% endcomment %}
+
+<section class="jdb-padding-32 jdb-light-gray jdb-border-bottom">
+  <div class="jdb-content">
+    {% include newsletter.html class="jdb-padding" closed=true %}
+  </div>
+</section>

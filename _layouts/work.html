@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<div class="study">
+  <article>
+    {% if page.link_video %}
+      <div {% if page.thumbnail %} class="thumbnail-as-bg"{% endif %}>
+        <section class="mast--media bg-black rellax" data-rellax-speed="-4">
+          <div class="absolute-vid">
+            <video autoplay loop muted>
+              <source type="video/mp4" src="{{ page.link_video }}">
+            </video>
+          </div>
+          <div class="grid">
+            <div class="mast__container">
+              <h1 class="mast__title">{{ page.title }}</h1>
+            </div>
+          </div>
+        </section>
+      </div>
+    {% elsif page.image %}
+      <div {% if page.thumbnail %} class="thumbnail-as-bg"{% endif %}>
+        <section class="mast--media bg-black rellax" data-rellax-speed="-4">
+          <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
+          <div class="grid">
+            <div class="mast__container">
+              <h1 class="mast__title">{{ page.title }}</h1>
+            </div>
+          </div>
+        </section>
+        {% include wave.html %}
+      </div>
+    {% else %}
+      <div {% if page.thumbnail %} class="thumbnail-as-bg"{% endif %}>
+        <section class="mast {% if page.header_class %}{{ page.header_class }}{% else %} bg-lightgrey{% endif %} rellax" data-rellax-speed="-4">
+          <div class="grid">
+            <div class="mast__container">
+              <h1 class="mast__title">{{ page.title }}</h1>
+            </div>
+          </div>
+        </section>
+      </div>
+    {% endif %}
+
+    <section class="study__content">
+      {{ content }}
+    </section>
+    
+  </article>
+</div>
+
+{% assign ordered_work = site.work | sort: 'order' %}
+{% if page.order == ordered_work.first.order %}
+  {% assign previous_post = ordered_work.last %}
+  {% assign next_post = ordered_work[1] %}
+{% elsif page.order == ordered_work.last.order %} 
+  {% assign previous = ordered_work | size | minus: 2 %}
+  {% assign previous_post = ordered_work[previous] %}
+  {% assign next_post = ordered_work.first %}
+{% else %}
+  {% assign previous = page.order | minus: 1 %}
+  {% assign next = page.order | plus: 1 %}
+  {% assign previous_post = ordered_work[previous] %}
+  {% assign next_post = ordered_work[next] %}
+{% endif %}
+<div class="pagination">
+  {% if previous_post.title %}
+    <a class="pagination__link section-padding" href="{{ previous_post.url | prepend: site.baseurl }}">
+      <span class="pagination__text">{{ previous_post.title }}</span>
+    </a>
+  {% else %}
+    <span class="pagination__link section-padding">
+      <span class="pagination__text">Aucun précédent</span>
+    </span>
+  {% endif %}
+  {% if next_post.title %}
+    <a class="pagination__link section-padding" href="{{ next_post.url | prepend: site.baseurl }}">
+      <span class="pagination__text">{{ next_post.title }}</span>
+    </a>
+  {% else %}
+    <span class="pagination__link section-padding">
+      <span class="pagination__text">Aucun précédent</span>
+    </span>
+  {% endif %}
+</div>

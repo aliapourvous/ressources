@@ -1,0 +1,24 @@
+---
+layout: null
+---
+/* AUTHOR */
+  {{ site.author.name }}, {{ site.description }}
+  Contact: {{ site.author.email }}
+  Twitter: @{{ site.author.twitter }}
+  From: Brussels, Belgium
+
+/* SITE */
+  Last Updated: {{ site.time | date:"%Y/%m/%d" }}
+  Language: French
+  Standards: HTML5, CSS3, Jekyll, Liquid
+  Theme: {{ site.theme }}
+  IDE: VS Code, Sublime Text 3
+  {% if site.github.versions %}Components: {% for dependency in site.github.versions %}{{ dependency[0] }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}{% endif %}
+
+{% if site.github.contributors  %}
+/* CONTRIBUTORS */
+  {%- for contributor in site.github.contributors %}
+  Name: {{ contributor.login }}
+  Site: {{ contributor.html_url }}
+  {% endfor -%}
+{%- endif -%}

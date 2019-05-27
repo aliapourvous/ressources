@@ -1,0 +1,23 @@
+{% assign wave_color = "#fff" %}
+{% if include.color %}
+  {% assign wave_color = include.color %}
+{% endif %}
+
+{% include svgs.html color=wave_color %}
+
+<style type="text/css">
+  .wave {
+    color: {{ wave_color }};
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+</style>
+
+<div class="wave" hidden="" aria-hidden="true">
+  <svg viewBox="0 0 1440 120">
+    <use xlink:href="#wave"></use>
+  </svg>
+</div>

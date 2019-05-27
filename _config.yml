@@ -1,0 +1,160 @@
+# Where things are
+source              : .
+destination         : ./_site
+# collections_dir     : .
+# authors_dir         : _authors
+# plugins_dir         : _plugins
+layouts_dir         : _layouts
+# data_dir            : _data
+includes_dir        : _includes
+
+lang        : fr
+encoding    : "utf-8"
+name        : Alia Elesse
+title       : "Coucou! C’est Alia & C pour vous!"
+description : >
+  Je m'appelle Alia Elesse. Je suis une ... à Bruxelles, Belgique.
+url         : https://www.aliapourvous.com/
+
+# Site/SEO settings
+email            : welcome@aliapourvous.com
+google_analytics : # UA-86918712-1
+disqus_id        : aliapourvous
+mailchimp_list   : false # MailChimp list URL
+ig_access_token  : "1038057777.1677ed0.3947ab2dcea24791b60f6262a81b14f4"
+default_img      : /assets/images/no-image.png
+
+github:
+  repository_url: https://github.com/aliapourvous/aliapourvous
+  zip_url: https://github.com/aliapourvous/aliapourvous/archive/master.zip
+social:
+  # github    : https://github.com/aliapourvous
+  instagram : https://instagram.com/aliaelesse
+  twitter   : https://twitter.com/OfficialAlia
+  facebook  : https://fb.com/Alia.B.Elesse
+  youtube   : https://youtube.com/user/Aliamusik
+  formations: https://formations.aliapourvous.com
+  email     : welcome@aliapourvous.com
+
+# set to 'true' to enable Netlify CMS (/admin) in production builds
+netlifycms: true
+
+# Add GA Id to enable Google Analytics tracking code in production builds
+analytics:
+  google:
+    tracking_id: # UA-86918712-1
+    site_verification:
+
+# Build settings
+include             : [".htaccess"]
+exclude             : ["README.md", "gulpfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+keep_files          : [".git", ".svn"]
+markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+markdown            : kramdown
+regenerate          : true
+incremental         : true
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-watch
+  - jekyll-minifier # from https://github.com/digitalsparky/jekyll-minifier
+  - jekyll-redirect-from
+  - jekyll-assets
+  - jekyll/tagging
+  # - jekyll-seo-tag
+
+# sass:
+#   style: compact # possible values: nested expanded compact compressed
+#   deploy_style: compressed # for build
+#   compile_in_place: true
+
+assets:
+  prefix: "/assets"
+  sources:
+    - _assets/scss
+    - _assets/js
+    # - _assets/img
+  compress:
+    css : sass
+    js  : uglifier
+  features:
+    automatic_img_alt  : true
+    automatic_img_size : false
+
+compress_html:
+  clippings : all
+  comments  : all
+  startings : [html, head, body]
+
+exclude:
+  - node_modules
+  - .DS_Store
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - README.md
+
+# Pagination
+paginate      : 6
+per_page      : 6
+permalink     : /blog/:year/:month/:day/:title/
+paginate_path : /blog/page:num/
+limit         : 6
+# sort_field: 'date'
+# sort_reverse: true
+
+# Collections
+collections:
+  # work:
+  #   output: true
+  #   permalink: /:path/
+  # category:
+  #   output: true
+  #   permalink: /:collection/:name/index
+  # authors:
+  #   output: true
+
+defaults:
+  # All categories
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+  # All posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      noindex: true
+      comments: true
+      # author: sal
+      # avatar: /assets/images/avatar1.jpg
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      noindex: true
+
+# Tag page
+tag_page_layout : tag_page
+tag_page_dir    : blog/tag
+# tag_permalink_style: pretty
+ignored_tags: []
+tag_page_data:
+  sitemap: false
+
+# tags:
+#   # Featured tag.s
+#   featured: 
+
+# reading_time
+reading_time:
+  words_per_minute: 180
+  translations:
+    about   : environ
+    minute  : minute
+    minutes : minutes

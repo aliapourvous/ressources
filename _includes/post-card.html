@@ -1,0 +1,24 @@
+<article class="jdb-posts__post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <a class="jdb-posts__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+    <div class="">
+      <div class="jdb-margin-bottom">
+        <div class="jdb-hover-shadow">
+          <div class="jdb-posts__thumbnail jdb-display-container">
+            {% if post.category %}
+              <div class="jdb-display-topleft jdb-theme-action jdb-padding-small">
+                <span><i class="fa fa-tag" aria-hidden="true"></i> {{ post.category }}</span>
+              </div>
+            {% endif %}
+            {% assign no_thumbnail = false %}
+            <figure class="absolute-bg" style="background-image:url({% if post.image %}{% if post.image contains '://' %}{{ post.image }}{% else %}{{ post.image | absolute_url }}{% endif %}{% elsif post.thumbnail %}{{ post.thumbnail  }}{% else %}{{ '/assets/images/no-image.png' | prepend: site.baseurl }}{% assign no_thumbnail = true %}{% endif %});{% if no_thumbnail %}background-size:contain!important;background-color:var(--theme-color);{% endif %}"></figure>
+          </div>
+
+          <div class="jdb-posts__header jdb-container jdb-white">
+            <p class="jdb-posts__title jdb-xlarge" itemprop="name"><b>{{ post.title }}</b></p>
+            <p class="jdb-posts__text"><i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %Y" }}</time> – <span itemprop="description">{{ post.content | strip_html | truncatewords: 23, "..." }}</span>{% include read_time_feed.html %}{% if page.show_read_more_button %} <div class="read_more_button jdb-right-align"><div class="jdb-button">Continuer <i class="fa fa-angle-double-right" aria-hidden="true"></i></div></div>{% endif %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
