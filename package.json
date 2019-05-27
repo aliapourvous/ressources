@@ -1,0 +1,19 @@
+{
+  "name": "ressources",
+  "version": "1.0.0",
+  "description": "Ressources site for Aliapourvous",
+  "main": "index.js",
+  "scripts": {
+    "test": "jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliapourvous/ressources.git"
+  },
+  "author": "jdbruxelles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliapourvous/ressources/issues"
+  },
+  "homepage": "https://github.com/aliapourvous/ressources#readme"
+}
