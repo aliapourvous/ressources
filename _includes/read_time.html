@@ -1,9 +1,0 @@
-<span class="reading__time" title="Temps de lecture estimé">
-  <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  {% assign words = content | number_of_words %}
-  {% if words < 265 %}
-    1 minute
-  {% else %}
-    {{ words | divided_by:133 }} minutes
-  {% endif %}
-</span>

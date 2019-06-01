@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /*
-Disallow: /404.html
-Disallow: /admin/index.html
-
-Sitemap: https://www.aliapourvous.com//sitemap.xml
-Host: www.we-rl.xyz
