@@ -1,0 +1,105 @@
+---
+layout: default
+permalink: /
+---
+<section class="intro jdb-theme jdb-padding-64">
+  <div class="grid jdb-display-container">
+    <div class="jdb-container jdb-padding-64" style="max-width:1234px; margin:auto">
+      <h1 class="intro__text font-effect-emboss jdb-text-white">
+        BONJOUR,<br/>Je m’appelle Alia et je suis une créatrice de contenu, une entrepreneure créative et une artiste pour la cause.
+      </h1>
+    </div>
+  </div>
+</section>
+{% include wave.html %}
+
+ <!-- if site.tags.featured.size > 0  -->
+  <!-- <section id="featured" class="posts jdb-row jdb-padding jdb-border jdb-white">
+    <div class="grid">
+      <h2 class="posts__title">
+        <span>Articles mis en avant</span></a>
+      </h2>
+      <div class="posts__container">
+        {% for post in site.tags.featured limit:3 %}
+          {% include post-card.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </section> -->
+
+<div class="jdb-padding-32"></div>
+
+<section id="articles" class="posts jdb-white">
+  <div class="jdb-row-padding jdb-padding jdb-white jdb-content">
+    <div class="jdb-col l8 s12">
+      <h3 class="posts__title jdb-center">
+        <span>Articles récents</span> - <a href="{{ '/blog' | prepend: site.baseurl }}"><u>Blog</u></a>
+      </h3>
+      <div class="posts__container jdb-row-padding" itemscope itemtype="http://schema.org/Blog">
+        
+        {% for post in site.posts limit:3 %}
+          {% include post-card.html %}
+        {% endfor %}
+
+      </div>
+      {% if site.next_page %}
+        <div class="posts__pages" data-pages="{{ paginator.total_pages }}"></div>
+        <div class="posts__pagination">
+          <span class="posts__next">Charger plus d'articles</span>
+        </div>
+      {% else %}
+        <div class="jdb-center">
+          <a class="jdb-button jdb-transparent" href="{{ '/blog/' }}">
+            Accéder au blog <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    <div class="jdb-col l4">
+      <div class="jdb-dark-gray__">
+          <div class="jdb-container jdb-padding jdb-theme">
+            <h4><i class="fa fa-bullhorn" aria-hidden="true"></i> Publicité</h4>
+          </div>
+          <div class="jdb-container jdb-white">
+            <div class="jdb-container jdb-display-container jdb-light-grey jdb-section" style="height:200px; background-image:url({{ '/assets/images/no-image.png' | prepend: site.baseurl }});background-position:right; background-size:contain; background-repeat:no-repeat">
+              <span class="jdb-display-leftmiddle jdb-margin-left" style="max-width:140px">Aucune publicité pour le moment</span>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        {% include tag_widget.html %}
+        <hr/>
+        <div class="jdb-margin-bottom">
+          {% include newsletter.html class="jdb-white jdb-padding-small" %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jdb-light-gray jdb-padding" id="inscription" style="padding-top:0!important;">
+    <div class="jdb-content jdb-margin-bottom">
+      {% include newsletter.html %}
+    </div>
+  </div>
+</section>
+
+{% if site.social.instagram %}
+  <section>
+    <div id="instagram">
+      <div class="jdb-container jdb-theme">
+        <p class="jdb-xlarge jdb-center">
+          <i class="fa fa-instagram jdb-text-pink" aria-hidden="true"></i> 
+            Suivez <i><a class="link" href="{{ site.social.instagram }}" target="_blank">
+              @{{ site.social.instagram | split: ".com/" | last }}</a></i> sur instagram
+        </p>
+      </div>
+    </div>
+    <div id="instagram-frame"></div>
+  </section>
+{% endif %}
+
+<section class="jdb-padding-64 jdb-black jdb-center jdb-theme">
+  <a class="jdb-xxlarge link" href="{{ '/contact' | prepend: site.baseurl }}">
+    <span class="">Contactez-moi</span>
+  </a>
+</section>

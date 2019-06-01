@@ -1,0 +1,31 @@
+---
+layout: default
+permalink: /
+---
+<style type="text/css">
+  #news .jdb-right-align a {
+    text-decoration: none;
+    box-shadow: none;
+  }
+</style>
+<h1 class="jdb-center">Les formulaires</h1>
+<div class="jdb-container jdb-section jdb-padding jdb-round-large jdb-border jdb-light-gray">
+  <span><i class="fa fa-info-circle" aria-hidden="true"></i> Faites votre choix parmi les formulaires suivant. En m'envoyant votre inscription via un des formuaires, vous indiquez accepter que je vous envoie des emails (newsletters) liés à ce formulaire. Vous pouvez vous inscrire à plusieurs formulaires.</span>
+</div>
+<p><a href="#news"><u>Abonnez-vous</u></a> à mes newsletters pour ne rien manquer.</p>
+<ul class="jdb-ul" id="news">
+  {% for form in site.data.forms %}
+    <li class="jdb-hover-shadow">
+      <h3>
+        <i class="fa fa-angle-double-right jdb-text-gray jdb-hide-small" aria-hidden="true"></i> 
+        <a href="{{ form.url }}">{{ form.name }}</a>
+      </h3>
+      <p>{{ form.description }}</p>
+      <div class="jdb-right-align">
+        <a class="jdb-btn jdb-round jdb-light-gray jdb-hover-pale-red jdb-hover-border-red jdb-border" href="{{ form.url }}">
+          En savoir plus <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+{% assign words = post.content | number_of_words %}
+<div class="reading__time_feed">
+  <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  {% if words < 265 %}
+    1 minute
+  {% else %}
+    {{ words | divided_by:133 }} minutes
+  {% endif %}
+</div>

@@ -1,0 +1,73 @@
+---
+layout: page
+title: A propos
+permalink: /a-propos
+thumbnail: /assets/images/P1000006.jpg
+---
+
+<!-- <script src="https://s3.amazonaws.com/cdn.io/datas/lib/jdb/1.21.0/jdb.min.js"></script> -->
+
+<img class="jdb-image jdb-right jdb-padding" src="{{ '/assets/images/me-P1000034.jpg' }}" alt="Alia Elesse" style="max-width:500px;width: 100%"/>
+
+<p class="jdb-xlarge jdb-bold">BONJOUR,</p>
+<p class="jdb-text-justify">Je m'appelle Alia et je suis une créatrice de contenu, une entrepreneure créative et une artiste pour la cause.</p>
+
+<p class="jdb-text-justify">Je fais <a href="https://www.youtube.com/user/Aliamusik" target="_blank">des vidéos</a>, <a href="https://soundcloud.com/alialadygirl/alia-fin-mix-mp3" target="_blank">je chante</a> en artiste solo, mais je fais également partie d'une chorale <a href="https://ressources.aliapourvous.com/categories/voix-d-eaux-vives" target="_blank">« Voix d'eaux vives »</a> et je suis une fille d'Elodie</p>
+
+<p class="jdb-text-justify">Je suis également co-fondatrice d'une association nommée <a href="https://www.facebook.com/groups/creactionworld/" target="_blank">Cré'Actionworld</a> composé d'entrepreneurs culturels et créatifs qui a pour but de promouvoir la créativité comme un outil de développement</p>
+
+<p class="jdb-text-justify">Mon blog, « Coucou! C’est Alia & C pour vous! » est une ressource pour le développement personnel + design de style de vie. Ici, vous pouvez trouver du contenu pratique, inspirant et réfléchi pour vous aider à gérer vos projets et à créer votre vie de rêve avec confiance. Ce que vous apprendrez ici nourrira votre esprit et votre âme, ouvrira votre cœur et vous inspirera à agir.</p>
+
+<div class="jdb-panel jdb-theme-l5 jdb-border jdb-round jdb-card" id="contact-social">
+  <p class="jdb-center">
+    <i class="fa fa-angle-double-down jdb-animate-fading" aria-hidden="true"></i>
+       CONNECTEZ-VOUS AVEC MOI 
+    <i class="fa fa-angle-double-down jdb-animate-fading" aria-hidden="true"></i>
+  </p>
+</div>
+
+<!-- ul.jdb-ul>(li>a>i.fa.fa-[aria-hidden=true])*6 -->
+{% if site.social.size > 0 %}
+  <ul class="jdb-ul jdb-border">
+    {% if site.social.youtube %}
+      <li><i class="fa fa-fw fa-youtube jdb-text-red" aria-hidden="true"></i> 
+        <a href="{{ site.social.youtube }}">Youtube</a></li>
+    {% endif %}
+    {% if site.social.instagram %}
+      <li><i class="fa fa-fw fa-instagram jdb-text-pink" aria-hidden="true"></i> 
+        <a href="{{ site.social.instagram }}">Instagram</a></li>
+    {% endif %}
+    {% if site.social.facebook %}
+      <li><i class="fa fa-fw fa-facebook jdb-text-blue-gray" aria-hidden="true"></i> 
+        <a href="{{ site.social.facebook }}">Facebook</a></li>
+    {% endif %}
+    {% if site.social.pinterest %}
+      <li><i class="fa fa-fw fa-pinterest jdb-text-red" aria-hidden="true"></i> 
+        <a href="{{ site.social.pinterest }}">Pinterest</a></li>
+    {% endif %}
+    {% if site.social.twitter %}
+      <li><i class="fa fa-fw fa-twitter jdb-text-blue" aria-hidden="true"></i> 
+        <a href="{{ site.social.twitter }}">Twitter</a></li>
+    {% endif %}
+    <li><i class="fa fa-fw fa-envelope jdb-text-gray" aria-hidden="true"></i> 
+      <a href="mailto:creactionworld@gmail.com">Email 
+        <span class="jdb-text-gray">(Demandes de renseignements)</span>
+      </a>
+    </li>
+  </ul>
+{% endif %}
+
+{% if site.social.instagram %}
+  <section>
+    <div id="instagram">
+      <div class="jdb-container jdb-theme">
+        <p class="jdb-xlarge jdb-center">
+          <i class="fa fa-instagram jdb-text-pink" aria-hidden="true"></i> 
+            Suivez <i><a class="link" href="{{ site.social.instagram }}" target="_blank">
+              @{{ site.social.instagram | split: ".com/" | last }}</a></i> sur instagram
+        </p>
+      </div>
+    </div>
+    <div id="instagram-frame"></div>
+  </section>
+{% endif %}
