@@ -1,18 +1,18 @@
 <article class="jdb-posts__post">
-  <a class="jdb-posts__link" href="{{ form.url }}">
+  <a class="jdb-posts__link" href="{{ item.url }}">
     <div class="jdb-margin-bottom">
       <div class="jdb-hover-shadow">
         <div class="jdb-posts__thumbnail jdb-display-container">
           {% assign no_thumbnail = false %}
-          <figure class="absolute-bg" style="background-image:url({% if form.thumbnail %}{{ form.thumbnail }}{% else %}{{ '/assets/images/no-image.png' | prepend: site.baseurl }}{% assign no_thumbnail = true %}{% endif %});{% if no_thumbnail %}background-size:contain!important;background-color:var(--theme-color);{% endif %}"></figure>
+          <figure class="absolute-bg" style="background-image:url({% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ '/assets/images/no-image.png' | prepend: site.baseurl }}{% assign no_thumbnail = true %}{% endif %});{% if no_thumbnail %}background-size:contain!important;background-color:var(--theme-color);{% endif %}"></figure>
         </div>
 
         <div class="jdb-posts__header jdb-container jdb-light-gray">
           <p class="jdb-posts__title jdb-xlarge" itemprop="name">
-            <b>{{ form.name }}</b>
+            <b>{{ item.name }}</b>
           </p>
           <p class="jdb-posts__text">
-            <span itemprop="description">{{ form.description | strip_html | truncatewords: 23, "..." }}</span>{% if page.show_read_more_button %} <div class="read_more_button jdb-right-align"><div class="jdb-button">S'inscrire <i class="fa fa-angle-double-right" aria-hidden="true"></i></div></div>{% endif %}</p>
+            <span itemprop="description">{{ item.description | strip_html | truncatewords: 23, "..." }}</span>{% if page.show_read_more_button %} <div class="read_more_button jdb-right-align"><div class="jdb-button">S'inscrire <i class="fa fa-angle-double-right" aria-hidden="true"></i></div></div>{% endif %}</p>
         </div>
       </div>
     </div>

@@ -10,13 +10,13 @@
 <loc>http://localhost:4000/formations/creaction/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/ressources/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/formations/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/categories/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/formations/lead-malgre-moi/</loc>
@@ -28,6 +28,6 @@
 <loc>http://localhost:4000/videos</loc>
 </url>
 <url>
-<loc>http://localhost:4000/formations/voix-d-eaux-vives/</loc>
+<loc>http://localhost:4000/categories/voix-d-eaux-vives/</loc>
 </url>
 </urlset>
