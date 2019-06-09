@@ -1,6 +1,8 @@
-<figure>
-  <img src="{{ include.src }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}"/>
-  {% if include.caption %}
-    <figcaption><small>{{ include.caption | markdownify }}</small></figcaption>
-  {% endif %}
+<figure class="{{ include.figure_class }}">
+  <a class="jdb-image-zoom" href="{{ include.src }}">
+    <img class="{{ include.img_class }}" src="{{ include.src }}" alt="{{ include.alt }}"/>
+    {% if include.caption %}
+      <figcaption><small>{{ include.caption | markdownify }}</small></figcaption>
+    {% endif %}
+  </a>
 </figure>

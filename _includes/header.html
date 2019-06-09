@@ -4,35 +4,38 @@
   </div>
   <div class="jdb-top-header jdb-bar jdb-white jdb-card-2 jdb-hide-small">
     {% if site.social.size > 0 %}
+      <a class="jdb-button link jdb-bar-item jdb-hover-theme jdb-hover-text-white" href="{{ '/' }}">
+        <i class="fa fa-home" aria-label="Accueil" aria-hidden="true"></i>
+      </a>
       {% if site.social.github %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.github }}" target="_blank">
           <i class="fa fa-github jdb-text-black" aria-label="GitHub" aria-hidden="true"></i>
-          <!--<span class="jdb-hide"> GitHub</span>--></a>
+        </a>
       {% endif %}
       {% if site.social.codepen %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.codepen }}" target="_blank">
           <i class="fa fa-codepen jdb-text-black" aria-label="CodePen" aria-hidden="true"></i>
-          <!--<span class="jdb-hide"> CodePen</span>--></a>
+        </a>
       {% endif %}
       {% if site.social.facebook %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.facebook }}" target="_blank">
           <i class="fa fa-facebook-official jdb-text-blue-gray" aria-label="Facebook" aria-hidden="true"></i> 
-          <!--<span class="jdb-hide"> Facebook</span>--></a>
+        </a>
       {% endif %}
       {% if site.social.instagram %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.instagram }}" target="_blank">
           <i class="fa fa-instagram jdb-text-pink" aria-label="Instagram" aria-hidden="true"></i>
-          <!--<span class="jdb-hide"> Instagram</span>--></a>
+        </a>
       {% endif %}
       {% if site.social.twitter %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.twitter }}" target="_blank">
           <i class="fa fa-twitter jdb-text-blue" aria-label="Twitter" aria-hidden="true"></i>
-          <!--<span class="jdb-hide"> Twitter</span>--></a>
+        </a>
       {% endif %}
       {% if site.social.snapchat %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.snapchat }}" target="_blank">
           <i class="fa fa-snapchat-ghost jdb-text-yellow" aria-label="Snapchat" aria-hidden="true"></i>
-          <!--<span class="jdb-hide"> Snapchat</span>--></a>
+        </a>
       {% endif %}
       {% if site.social.dev %}
         <a class="jdb-button link jdb-bar-item" href="{{ site.social.dev.link }}" target="_blank">
@@ -43,50 +46,30 @@
         <i class="fa fa-home" aria-hidden="true"></i> Accueil
       </a>
     {% endif %}
-    <a href="/recherche" class="jdb-bar-item jdb-button jdb-right">
-      <i class="fa fa-search" aria-label="recherche" aria-hidden="true"></i>
+    <a href="/recherche" class="jdb-bar-item jdb-button jdb-right jdb-hide">
+      <i class="fa fa-search" aria-label="Recherche" aria-hidden="true"></i>
     </a>
   </div>
   <nav class="jdb-navigation jdb-white jdb-medium">
     <div id="large-menu" class="jdb-bar jdb-border-bottom">
-      <a class="jdb-bar-item jdb-button jdb-hide-medium jdb-hide-large jdb-right" role="button" data-jdb-action="toggle-small-screen-menu" href="javascript:void(0);" title="Toggle Navigation Menu">
+      <a class="jdb-bar-item jdb-button jdb-hide-large jdb-right" role="button" data-jdb-action="toggle-small-screen-menu" href="javascript:void(0);" title="Afficher/Cacher le menu">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </a>
-      <a href="{{ '/' | prepend: site.baseurl }}" class="jdb-bar-item logo jdb-button jdb-hide-small" role="logo">
-        <strong class="jdb-text-theme">ALIAPOURVOUS</strong></a>
+      <a href="https://aliapourvous.com" class="jdb-bar-item logo jdb-button" role="logo">
+        <strong class="jdb-text-theme">ALIAPOURVOUS <span class="jdb-hide-small">RESSOURCES</span></strong>
+      </a>
 
-      <div class="jdb-right">
-        <a href="{{ '/blog' | prepend: site.baseurl }}" class="jdb-bar-item jdb-button jdb-hide-small">
-          <i class="fa fa-newspaper-o" aria-hidden="true"></i> BLOG</a>
-        <div class="jdb-dropdown-hover">
-          <a class="jdb-button" href="/ressources/"><i class="fa fa-list" aria-hidden="true"></i> RESSOURCES</a>
-          <div class="jdb-dropdown-content jdb-bar-block jdb-border" style="z-index:9999">
-            <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Lien 1</a>
-            <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Lien 2</a>
-            <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Lien 3</a>
-          </div>
-        </div>
-        {% if page.url != "/" and page.url != "/a-propos" and page.url != "/contact" %}
-          <div class="jdb-dropdown-hover">
-            <button class="jdb-button"><i class="fa fa-list" aria-hidden="true"></i> CATÉGORIES</button>
-            <div class="jdb-dropdown-content jdb-bar-block jdb-border" style="z-index:9999">
-              <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Africa</a>
-              <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Artiste</a>
-              <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Globe trotteuse</a>
-              <a href="{{ '/#' }}" class="jdb-bar-item jdb-button">Lead malgré moi</a>
-            </div>
-          </div>
-        {% endif %}
-        <a href="{{ '/contact' | prepend: site.baseurl }}" class="jdb-bar-item jdb-button jdb-hide-small">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i> CONTACT</a>
-        <a href="{{ '/a-propos' | prepend: site.baseurl }}" class="jdb-bar-item jdb-button jdb-hide-small">
+      <div class="jdb-right jdb-hide-small jdb-hide-medium">
+        <a href="{{ '/contact' | prepend: site.baseurl }}" class="jdb-bar-item jdb-button">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i> CONTACT</a>
+        <a href="{{ '/a-propos' | prepend: site.baseurl }}" class="jdb-bar-item jdb-button">
           <i class="fa fa-user-circle-o" aria-hidden="true"></i> A PROPOS</a>
       </div>
     </div>
-    <div id="small-screen-menu" class="jdb-bar-block jdb-white jdb-hide-large jdb-hide-medium" style="display:none">
-      <a href="{{ '#about' }}" class="jdb-bar-item jdb-button" role="button" data-jdb-action="toggle-small-screen-menu">ABOUT</a>
-      <a href="{{ '#portfolio' }}" class="jdb-bar-item jdb-button" role="button" data-jdb-action="toggle-small-screen-menu">PORTFOLIO</a>
-      <a href="{{ '#contact' }}" class="jdb-bar-item jdb-button" role="button" data-jdb-action="toggle-small-screen-menu">CONTACT</a>
+    <div id="small-screen-menu" class="jdb-bar-block jdb-white jdb-hide-large" style="display:none">
+      <a class="jdb-bar-item jdb-button" data-jdb-action="toggle-small-screen-menu" href="{{ '/' }}">ACCUEIL</a>
+      <a class="jdb-bar-item jdb-button" data-jdb-action="toggle-small-screen-menu" href="{{ '/contact' }}">CONTACT</a>
+      <a class="jdb-bar-item jdb-button" data-jdb-action="toggle-small-screen-menu" href="{{ '/a-propos' }}">A PROPOS</a>
     </div>
   </nav>
 </header>

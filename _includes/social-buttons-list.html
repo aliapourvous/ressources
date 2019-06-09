@@ -1,0 +1,50 @@
+{% if site.social.size > 0 %}
+  <div class="social-container jdb-padding">
+    Suivez-moi : 
+    {% if site.social.github %}
+      <a class="jdb-decoration-0" href="{{ site.social.github }}" target="_blank" title="Github">
+        <i class="fa fa-fw fa-lg fa-github jdb-text-black" aria-label="GitHub" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.social.codepen %}
+      <a class="jdb-decoration-0" href="{{ site.social.codepen }}" target="_blank" title="CodePen">
+        <i class="fa fa-fw fa-lg fa-codepen jdb-text-black" aria-label="CodePen" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.social.facebook %}
+      <a class="jdb-decoration-0" href="{{ site.social.facebook }}" target="_blank" title="Facebook">
+        <i class="fa fa-fw fa-lg fa-facebook-official jdb-text-blue-gray" aria-label="Facebook" aria-hidden="true"></i> 
+      </a>
+    {% endif %}
+    {% if site.social.instagram %}
+      <a class="jdb-decoration-0" href="{{ site.social.instagram }}" target="_blank" title="Instagram">
+        <i class="fa fa-fw fa-lg fa-instagram jdb-text-pink" aria-label="Instagram" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.social.twitter %}
+      <a class="jdb-decoration-0" href="{{ site.social.twitter }}" target="_blank" title="Twitter">
+        <i class="fa fa-fw fa-lg fa-twitter jdb-text-blue" aria-label="Twitter" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.social.snapchat %}
+      <a class="jdb-decoration-0" href="{{ site.social.snapchat }}" target="_blank" title="Snapchat">
+        <i class="fa fa-fw fa-lg fa-snapchat-ghost jdb-text-yellow" aria-label="Snapchat" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.social.pinterest %}
+      <a class="jdb-decoration-0" href="{{ site.social.pinterest }}" target="_blank" title="Pinterest">
+        <i class="fa fa-fw fa-lg fa-pinterest jdb-text-yellow" aria-label="Pinterest" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% if site.social.facebook %}
+      <a class="jdb-decoration-0" href="{{ site.social.youtube }}" target="_blank" title="YouTube">
+        <i class="fa fa-fw fa-lg fa-youtube jdb-text-red" aria-label="Youtube" aria-hidden="true"></i> 
+      </a>
+    {% endif %}
+    {% if site.social.dev %}
+      <a class="jdb-decoration-0" href="{{ site.social.dev.link }}" target="_blank" title="DEV">
+        <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Mon profil DEV" height="20" width="20" rel="noindex"/>
+      </a>
+    {% endif %}
+  </div>
+{% endif %}

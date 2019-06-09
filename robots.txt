@@ -7,8 +7,9 @@ disallows:
 ---
 
 User-agent: *
+Disallow: *
 {% for disallowed in page.disallows -%}
 Disallow: {{ disallowed }}
 {% endfor %}
-Sitemap: {{ "sitemap.xml" | absolute_url }}
-Host: www.we-rl.xyz
+Sitemap: {{ "/sitemap.xml" | absolute_url }}
+Host: ressources.aliapourvous.com

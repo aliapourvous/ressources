@@ -12,19 +12,25 @@
   <meta name="googlebot" content="index,nofollow">
 {% endif %}
 
-{% if page.url != "/" %}
-  <script type="application/ld+json">
-    {
-      "@context"  : "http://schema.org/",
-      "@type"     : "Person",
-      "name"      : "{{ site.name }}",
-      "jobTitle"  : "Web Developer",
-      "email"     : "{{ site.email }}",
-      "url"       : "{{ site.url }}",
-      "image"     : "{{ site.default_img | prepend: site.baseurl }}"
-    }
-  </script>
-{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context"  : "http://schema.org/",
+    "@type"     : "Person",
+    "name"      : "{{ site.name }}",
+    "jobTitle"  : "Entrepreneure",
+    "email"     : "{{ site.email }}",
+    "url"       : "{{ site.url }}",
+    "image"     : "{{ site.default_img | prepend: site.baseurl }}",
+    "sameAs": [
+      {% if site.social.facebook %}"{{ site.social.facebook }}",{% endif %}
+      {% if site.social.instagram %}"{{ site.social.instagram }}",{% endif %}
+      {% if site.social.twitter %}"{{ site.social.twitter }}",{% endif %}
+      {% if site.social.youtube %}"{{ site.social.youtube }}",{% endif %}
+      {% if site.social.linkedin %}"{{ site.social.linkedin }}",{% endif %}
+    ]
+  }
+</script>
 
 <title>{% if page.url != "/" and page.title != "" %}{{ page.title | escape }} | {{ site.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
 <meta name="description" content="{{ site.description }}">
@@ -56,8 +62,11 @@
 {% if page.theme_color %}
   <meta name="theme-color" content="{{ page.theme_color }}">
   <meta name="msapplication-navbutton-color" content="{{ page.theme_color }}">
+{% else %}
+  <meta name="theme-color" content="#5dbcd2">
+  <meta name="msapplication-navbutton-color" content="#5dbcd2">
 {% endif %}
-<link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | prepend: site.baseurl }}">
+<link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
 <!-- <link rel="manifest" href="/manifest.json"/> -->
 
 <link rel="preconnect" href="https://www.google-analytics.com">
@@ -73,10 +82,6 @@
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/rss.xml' | prepend: site.baseurl }}">
 <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl }}">
-
-{% if site.tags != "" %}
-  {% include collecttags.html %}
-{% endif %}
 
 <script src="{{ '/assets/js/jquery.min.js' | prepend: site.baseurl }}"></script>
 

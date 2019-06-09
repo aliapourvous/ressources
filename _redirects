@@ -1,1 +1,5 @@
 # Redirect default Netlify subdomain to primary domain
+/blog*        https://aliapourvous.com/blog:splat    301!
+/a-propos     https://aliapourvous.com/a-propos      301!
+/contact      https://aliapourvous.com/contact       301!
+/ressources   https://aliapourvous.com/ressources    301!

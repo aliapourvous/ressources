@@ -6,7 +6,7 @@
   From: Brussels, Belgium
 
 /* SITE */
-  Last Updated: 2019/06/01
+  Last Updated: 2019/06/09
   Language: French
   Standards: HTML5, CSS3, Jekyll, Liquid
   Theme: 

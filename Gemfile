@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-minifier"
   gem "jekyll-redirect-from"
   gem "jekyll-assets"
-  gem "jekyll-tagging"
+  # gem "jekyll-tagging"
   # gem "jekyll-seo-tag"
 end
 

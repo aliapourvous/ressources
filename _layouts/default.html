@@ -9,7 +9,7 @@ layout: compress
 <body {% if page.thumbnail %}{% assign thumbnail_as_bg = 1 %} class="thumbnail-as-bg"{% endif %}>
   <div id="jdb-wrapper" {% if page.title %}class="{{ page.title | downcase | slugify }}"{% endif %}>
     {% include header.html %}
-    <main>{{ content }}</main>
+    <main {% if page.url == "/" %}class="home"{% endif %}>{{ content }}</main>
     {% include footer.html %}
   </div>
   

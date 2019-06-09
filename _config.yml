@@ -11,7 +11,7 @@ includes_dir        : _includes
 lang        : fr
 encoding    : "utf-8"
 name        : Alia Elesse
-title       : "Coucou! C’est Alia & C pour vous!"
+title       : "Ressources Aliapourvous"
 description : >
   Je m'appelle Alia Elesse. Je suis une ... à Bruxelles, Belgique.
 url         : https://www.aliapourvous.com/
@@ -34,7 +34,7 @@ social:
   twitter   : https://twitter.com/OfficialAlia
   facebook  : https://fb.com/Alia.B.Elesse
   youtube   : https://youtube.com/user/Aliamusik
-  formations: https://formations.aliapourvous.com
+  formations: https://ressources.aliapourvous.com/formations
   email     : welcome@aliapourvous.com
 
 # set to 'true' to enable Netlify CMS (/admin) in production builds
@@ -61,7 +61,6 @@ plugins:
   - jekyll-minifier # from https://github.com/digitalsparky/jekyll-minifier
   - jekyll-redirect-from
   - jekyll-assets
-  - jekyll/tagging
   # - jekyll-seo-tag
 
 # sass:
@@ -139,23 +138,3 @@ defaults:
     values:
       layout: page
       noindex: true
-
-# Tag page
-tag_page_layout : tag_page
-tag_page_dir    : blog/tag
-# tag_permalink_style: pretty
-ignored_tags: []
-tag_page_data:
-  sitemap: false
-
-# tags:
-#   # Featured tag.s
-#   featured: 
-
-# reading_time
-reading_time:
-  words_per_minute: 180
-  translations:
-    about   : environ
-    minute  : minute
-    minutes : minutes

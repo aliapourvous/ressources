@@ -38,7 +38,7 @@ function fetchInsta (options) {
           href: data.link,
           target: "_blank"
         }).append(
-          $("<div>").addClass(["jdb-padding", (data.type == "video" ? " insta-video" : "")]).append(
+          $("<div>").addClass((data.type == "video" ? " insta-video" : "")).append(
             $("<div>").attr({
               class: "jdb-image",
               style: "background-image:url(" + pic + ")"
@@ -87,6 +87,12 @@ $(document).ready(function(){
       $("#small-screen-menu").slideToggle();
     });
   });
+  
+  $("[data-jdb-toggle-onclick]").each(function() {
+    $(this).click(function() {
+      $($(this).attr("data-jdb-toggle-onclick")).slideToggle();
+    });
+  });
 
   $("[data-jdb-toggle]").each(function(){
     $(this).click(function(){
@@ -101,9 +107,9 @@ $(document).ready(function(){
     tClose: "Fermer (Echap)",
     tLoading: "Chargement...",
     gallery: {
-      tPrev: "Précédent (Flèche gauche)",
-      tNext: "Suivant (Flèche droite)",
-      tCounter: "%curr% sur %total%"
+      tPrev: "Précédent (Bouton gauche)",
+      tNext: "Suivant (Bouton droit)",
+      tCounter: "Photo %curr% sur %total%"
     },
     image: {
       tError: "<a href='%url%'>L'image</a> ne peut être chargée."
@@ -113,7 +119,11 @@ $(document).ready(function(){
     }
   });
 
-  // $(".page img, .post img").magnificPopup({type:"image"});
+  $("a.jdb-image-zoom").magnificPopup({ type: "image" });
+
+  if ($(".home").length) {
+    $(".home a.jdb-image-zoom").magnificPopup({ type: "image" });
+  }
 
   (function(){
     if (document.querySelector(".news-container") !== null) {

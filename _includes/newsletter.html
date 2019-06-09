@@ -1,35 +1,5 @@
 <div class="news-container">
-  <div class="jdb-container jdb-padding jdb-theme jdb-pointer jdb-ripple" data-jdb-toggle="#newsletters-content">
-    <h4><i class="fa fa-plus-circle" aria-hidden="true"></i> S'inscrire à la newsletter</h4>
-  </div>
-  <div class="news-content {% if include.class %}{{ include.class }}{% endif %}" id="newsletters-content" {% if include.closed == true %}style="display:none"{% endif %}>
-    {% if site.mailchimp_list == false %}
-      <div class="jdb-panel jdb-pale-red">
-        <p><i class="fa fa-meh-o" aria-hidden="true"></i> Désolé, le système de newsletter n'est pas encore configuré pour le moment.</p>
-      </div>
-    {% endif %}
-    <p>Pour suivre les articles sur mon blog, vous pouvez vous abonner via le <a class="s-link" href="{{ '/rss.xml' | prepend: site.baseurl }}"  target="_blank">RSS <i class="fa fa-rss" aria-hidden="true"></i></a> ou le <a class="s-link" href="{{ '/feed.json' | prepend: site.baseurl }}"  target="_blank">JSON Feed</a> {% if site.mailchimp_list %}ou encore vous inscrire à ma newsletter (Aliapourvous) via le formulaire ci-dessous{% else %}ou encore vous inscrire à <a class="s-link" href="{{ site.data.links.site.data.links.ressources.home }}" target="_blank" hreflang="fr">mes autres newsletters <i class="fa fa-external-link" aria-hidden="true"></i></a>{% endif %}.</p>
-    {% if site.mailchimp_list %}
-      <form action="" class="news-form">
-        <div class="jdb-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="jdb-half">
-            <input class="jdb-input jdb-border" type="text" name="name" placeholder="Nom" title="Renseignez votre nom" spellcheck="false" required/>
-            <div class="jdb-hide-large jdb-hide-medium jdb-padding-small"></div>
-          </div>
-          <div class="jdb-half">
-            <input class="jdb-input jdb-border" type="email" name="email" placeholder="Adresse email" title="Renseignez votre adresse email" spellcheck="false" required/>
-          </div>
-        </div>
-        <div class="jdb-section">
-          <button class="jdb-button jdb-block jdb-red jdb-ripple jdb-hide" type="submit">
-            Envoyer <i class="fa fa-send" aria-hidden="true"></i></button>
-        </div>
-        <p class="jdb-right-align">
-          <a class="jdb-button jdb-transparent" href="{{ site.data.links.site.data.links.ressources.home }}" target="_blank" hreflang="fr">
-            S'inscrire à d'autres listes <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-          </a>
-        </p>
-      </form>
-    {% endif %}
-  </div>
+  <a class="jdb-btn jdb-block jdb-theme jdb-round {{ include.class }}" href="{{ site.data.links.formations }}" target="_blank">
+    <i class="fa fa-envelope" aria-hidden="true"></i>  S'inscrire aux newsletters
+  </a>
 </div>

@@ -1,0 +1,17 @@
+---
+layout: page
+title: "Formations"
+permalink: /formations/
+header_class: jdb-theme
+show_read_more_button: true
+---
+<div class="jdb-container jdb-section jdb-padding jdb-round-large jdb-border jdb-light-gray">
+  <span><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> <strong>Les formulaires :</strong> Faites votre choix parmi les formulaires suivant. En m'envoyant votre inscription via un des formuaires, vous indiquez accepter que je vous envoie des emails (newsletters) liés à ce formulaire. Vous pouvez vous inscrire à plusieurs formulaires.</span>
+</div>
+
+<p><a href="#news"><u>Abonnez-vous</u></a> à mes newsletters pour ne rien manquer.</p>
+<div id="news">
+  {% for form in site.data.forms %}
+    {% include post-card.html %}
+  {% endfor %}
+</div>
