@@ -4,7 +4,7 @@ layout: default
 
 <div class="page {% if page.thumbnail %}thumbnail-as-bg{% endif %}">
   <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-    <section class="mast jdb-display-container jdb-padding-64-- {% if page.header_class %}{{ page.header_class }}{% endif %}" style="min-height:{% if page.thumbnail %}350px{% else %}250px{% endif %}{% if page.header_shadow %};box-shadow:inset 0px 0 15px 5px #333{% endif %}{% if page.header_css %};{{ page.header_css  }}{% endif %}">
+    <section class="mast jdb-display-container jdb-padding-64-- {% if page.header_class %}{{ page.header_class }}{% else %}jdb-theme{% endif %}" style="min-height:{% if page.thumbnail %}350px{% else %}250px{% endif %}{% if page.header_shadow %};box-shadow:inset 0px 0 15px 5px #333{% endif %}{% if page.header_css %};{{ page.header_css  }}{% endif %}">
       <div class="grid" style="position:initial">
         <div class="mast__container">
           <div class="mast__content jdb-display-middle jdb-padding">

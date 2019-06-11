@@ -1,5 +1,17 @@
+- name: "Cré'Action"
+  url: "/formations/creaction"
+  description: "Cré'Action est une communauté des entrepreneurs créatifs de partout dans le monde..."
+  form_url: "https://aliapourvous.us12.list-manage.com/subscribe/post?u=ef120c113a440e90bff9f5964&amp;id=641fb09296"
+  thumbnail:
+  
 - name: "Voix d'eaux vives - Voices of the living water"
   url: "/categories/voix-d-eaux-vives"
   description: "Voix d'eaux vives est un collectif d'artistes chrétien évoluant dans la musique gospel contemporaine..."
   form_url: "https://linkedin.us12.list-manage.com/subscribe/post?u=ef120c113a440e90bff9f5964&amp;id=79a5b398dd"
+  thumbnail:
+
+- name: "Artiste pour une cause"
+  url: "/categories/artiste-pour-une-cause"
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, nisi corporis iusto eligendi ea, provident cupiditate"
+  form_url: ""
   thumbnail:

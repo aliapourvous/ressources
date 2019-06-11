@@ -1,12 +1,12 @@
 /* AUTHOR */
-  , Je m'appelle Alia Elesse. Je suis une ... à Bruxelles, Belgique.
+  , Mumpreneur, project Manager, Gospel singer, creating social & cultural project for young people.
 
   Contact: 
   Twitter: @
   From: Brussels, Belgium
 
 /* SITE */
-  Last Updated: 2019/06/09
+  Last Updated: 2019/06/11
   Language: French
   Standards: HTML5, CSS3, Jekyll, Liquid
   Theme: 

@@ -13,7 +13,7 @@ encoding    : "utf-8"
 name        : Alia Elesse
 title       : "Ressources Aliapourvous"
 description : >
-  Je m'appelle Alia Elesse. Je suis une ... à Bruxelles, Belgique.
+  Mumpreneur, project Manager, Gospel singer, creating social & cultural project for young people.
 url         : https://www.aliapourvous.com/
 
 # Site/SEO settings
@@ -22,7 +22,8 @@ google_analytics : # UA-86918712-1
 disqus_id        : aliapourvous
 mailchimp_list   : false # MailChimp list URL
 ig_access_token  : "1038057777.1677ed0.3947ab2dcea24791b60f6262a81b14f4"
-default_img      : /assets/images/no-image.png
+no_img           : /assets/images/no-image.png
+default_img      : /assets/images/me-161-20140401.jpg
 
 github:
   repository_url: https://github.com/aliapourvous/ressources
