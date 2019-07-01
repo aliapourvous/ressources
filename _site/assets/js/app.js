@@ -55,7 +55,7 @@ $(document).ready(function(){
     var wintop = $(win).scrollTop();
     var docheight = $(document).height();
     var winheight = $(win).height();
-    var totalScroll = (wintop/(docheight-winheight))*100;
+    var totalScroll = (wintop/(docheight-winheight)) * 100;
     $(".jdb-progressBarfx").css("width", totalScroll + "%");
 
     if (wintop >= 42.4) {
@@ -115,7 +115,32 @@ $(document).ready(function(){
     }
   });
 
-  $("a.jdb-image-zoom").magnificPopup({ type: "image" });
+  $("a.jdb-image-zoom").magnificPopup({
+      type: "image",
+      closeOnContentClick: false,
+      // closeBtnInside: !false,
+      // mainClass: "mfp-img-mobile",
+      image: {
+        // verticalFit: true,
+        titleSrc: function (item) {
+          var title = item.el.attr("title");
+          if (title) {
+            return title + " &middot; <a class=\"image-source-link\" href=\"" +
+              item.el.attr("data-source") + "\" target=\"_blank\">image source</a>";
+          }
+        }
+      },
+      // gallery: {
+      //   enabled: true
+      // },
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
+        opener: function (element) {
+          return element.find("img");
+        }
+      }
+    });
 
   if ($(".home").length) {
     $(".home a.jdb-image-zoom").magnificPopup({ type: "image" });

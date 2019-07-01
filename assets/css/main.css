@@ -154,7 +154,7 @@ a {word-break: normal}
 .jdb-lowercase {text-transform:lowercase!important}
 .jdb-uppercase {text-transform:uppercase!important}
 .jdb-text-justify {text-align:justify}
-.jdb-btn-block {width: 100%}
+.jdb-btn-block, .jdb-full {width: 100%}
 .jdb-wrap {white-space: normal}
 .jdb-margin-0 {margin:0}
 .jdb-margin-0-f {margin:0!important}

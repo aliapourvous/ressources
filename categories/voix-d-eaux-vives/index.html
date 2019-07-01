@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Voix d'eaux vives
+title: Voix d'eau vive
 description: Coucou! C' Alia & C' pour vous!
-theme_color:
+theme_color: #be5bff
 header_class: jdb-purple
 header_background:
   image: "url(assets/images/high-angle-shot-motion-1095965.jpg) no-repeat"
@@ -29,20 +29,33 @@ header_background:
   .page-header .project-name {
     font-weight: 700 !important;
   }
+  #section-nav-caontainer .jdb-row-padding a {
+    background-position: center;
+    background-size: cover;
+    border: 10px double #ccc;
+    height: 250px;    
+  }
+  #section-nav-caontainer .jdb-row-padding a .jdb-display-middle {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 6px 10px;
+    opacity: 0.5;
+  }
 </style>
-<div class="jdb-row">
-  <div class="jdb-twothird">
-    <p>Voix d'eaux vives est un collectif d'artistes évoluant dans la musique gospel contemporaine. Le groupe est formé et est originaire de la ville de Bruxelles.</p>
-    <p>Rattaché au groupe d'adoration du centre de réveils Fleuves d'eaux vives, il évolue dans un style poprock à caractère afrogospel. Il regroupe en son sein plusieurs disciplines artistiques dans un objectif commun : Un coeur à coeur avec le Créateur.</p>
+<!-- TODO: Fix or remove row -->
+<div class="jdb-row-">
+  <div class="jdb-twothird-">
+    <p>Voix d'eau vive est un collectif d'artistes évoluant dans la musique gospel contemporaine. Le groupe est formé et est originaire de la ville de Bruxelles.</p>
+    <p>Rattaché au groupe d'adoration du centre de réveils Fleuves d'eau vive, il évolue dans un style poprock à caractère afrogospel. Il regroupe en son sein plusieurs disciplines artistiques dans un objectif commun : Un coeur à coeur avec le Créateur.</p>
   </div>
   <!-- TODO: Fix image link -->
   <!-- <div class="jdb-third img1-in-main" style="height:225px; background-image:url({{ '/assets/images/eagle.jpeg' | relative_url }}); background-repeat:no-repeat; background-position:right; background-size:contain"></div> -->
 </div>
 
-<!-- <a href="{{ '/assets/images/voix-d-eaux-vives.jpeg' | relative_url }}" target="_blank"><img rel="noindex" src="{{ '/assets/images/voix-d-eaux-vives.jpeg' | relative_url }}" alt="Groupe Voix d'eaux vives" class="jdb-image jdb-round jdb-hover-shadow"/></a> -->
+{% include figure.html src="/assets/images/voix-d-eaux-vives.jpg" figure_class="jdb-image" img_class="jdb-image jdb-round jdb-hover-shadow" alt="Groupe Voix d'eau vive"%}
 
 <div class="jdb-panel jdb-padding-small jdb-light-grey jdb-border jdb-margin-top jdb-round-large">
-  <h1 class="jdb-bold jdb-center jdb-text-purple" style="color:#be5bff">CONTACTEZ-NOUS</h1>
+  <div class="jdb-bold jdb-xxlarge jdb-center jdb-text-purple" style="color:#be5bff">Contactez-nous</div>
   <!-- Begin Mailchimp Signup Form -->
   <div id="mc_embed_signup" class="jdb-round-large jdb-white">
     <form action="https://linkedin.us12.list-manage.com/subscribe/post?u=ef120c113a440e90bff9f5964&amp;id=79a5b398dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -74,7 +87,7 @@ header_background:
         </div>
         <div class="clear">
           <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button jdb-purple">
-            <i class="fa fa-plus" aria-hidden="true"></i> S'inscrire
+            <i class="fa fa-plus" aria-hidden="true"></i> S'inscrire <span class="jdb-hide-small">à la liste</span>
           </button>
         </div>
       </div>
@@ -83,3 +96,45 @@ header_background:
   {% include mailchimp-js.html %}
   <!--End mc_embed_signup-->
 </div>
+
+
+<section class="jdb-section" id="section-nav-caontainer">
+  <div class="jdb-row-padding">
+    <a class="jdb-third jdb-padding-64 jdb-display-container jdb-red" href="{{ 'conference' }}"
+      target="_blank" style="background-image:url({{ '/assets/images/me-P1000034.jpg' }});">
+      <div class="jdb-display-middle jdb-red">
+        <span>CONFERENCES</span>
+      </div>
+    </a>
+    <a class="jdb-third jdb-padding-64 jdb-display-container jdb-green" href="{{ 'festival' }}"
+      style="background-image:url({{ '#' }});">
+      <div class="jdb-display-middle jdb-black">
+        <span>FESTIVAL</span>
+      </div>
+    </a>
+    <a class="jdb-third jdb-padding-64 jdb-display-container jdb-sand" href="{{ 'concert' }}"
+      style="background-image:url({{ '#' }});">
+      <div class="jdb-display-middle jdb-yellow">
+        <span>CONCERT</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+{% if site.social.instagram %}
+  <section>
+    {% if site.social.instagram %}
+      <div id="instagram">
+        <div class="jdb-container jdb-purple jdb-round-xxlarge">
+          <p class="jdb-xlarge jdb-center">
+            <i class="fa fa-fw fa-instagram jdb-text-pink" aria-hidden="true"></i> 
+              Suivez <i><a class="link" href="{{ site.social.instagram }}" target="_blank">
+                @{{ site.social.instagram | split: ".com/" | last }}</a></i> sur instagram
+          </p>
+        </div>
+      </div>
+    {% endif %}
+    <div id="instagram-frame"></div>
+  </section>
+{% endif %}
