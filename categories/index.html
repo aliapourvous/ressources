@@ -11,7 +11,7 @@ show_read_more_button: true
 
 <p><a href="#news"><u>Abonnez-vous</u></a> à mes newsletters pour ne rien manquer.</p>
 <div id="news">
-  {% for item in site.data.categories %}
+  {% for item in site.data.index-categories %}
     {% include post-card.html %}
   {% endfor %}
 </div>
