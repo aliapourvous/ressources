@@ -1,23 +1,18 @@
-- name: "Legende urbaines"
-  url: "/categories/artiste-pour-une-cause/legendes-urbaines"
+- name: "Les filles d'Elodie"
+  url: "/artiste-pour-une-cause/les-filles-d-elodie"
+  description: "You are loved just as you are... So love yourself."
+  form_url: "https://aliapourvous.us12.list-manage.com/subscribe/post?u=ef120c113a440e90bff9f5964&amp;id=641fb09296"
+  thumbnail: "/assets/images/jealous-weekends-HjccMRF.jpg"
+  # Cré'Action est une communauté des entrepreneurs créatifs de partout dans le monde...
+  
+- name: "Voix d'eaux vives"
+  url: "/artiste-pour-une-cause/voix-d-eaux-vives"
+  description: "Voix d'eaux vives est un collectif d'artistes chrétien évoluant dans la musique gospel contemporaine..."
+  form_url: "https://linkedin.us12.list-manage.com/subscribe/post?u=ef120c113a440e90bff9f5964&amp;id=79a5b398dd"
+  thumbnail: "/assets/images/levi-xu-dOhJtfXJZfw.jpg"
+
+- name: "Créativement vôtre"
+  url: "/artiste-pour-une-cause/creaction"
   description: ""
-  # form_url: ""
-  thumbnail:
-
-- name: "Mon dîner chanté"
-  url: "/categories/artiste-pour-une-cause/mon-diner-chante"
-  description: "#Educationisthekey... Qui ouvre une école ferme une prison - By Victor Hugo"
-  # form_url: ""
-  thumbnail: "/assets/images/mon-diner-chante.jpeg"
-
-- name: "Peace of Art"
-  url: "/categories/artiste-pour-une-cause/peace-of-art"
-  description: "POA est un programme de sensibilisation et de formation qui œuvre pour la transformation des artistes..."
-  # form_url: ""
-  thumbnail: "/assets/images/peace-of-art.jpeg"
-
-- name: "Un geste, une vie"
-  url: "/categories/artiste-pour-une-cause/un-geste-une-vie"
-  description: "Faites un geste... C'est pour l'espérance d'une vie."
-  # form_url: ""
-  thumbnail:
+  form_url: ""
+  thumbnail: "/assets/images/alia-banner_10151318830341722_1214547744.jpg"

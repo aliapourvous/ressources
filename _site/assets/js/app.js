@@ -153,15 +153,5 @@ $(document).ready(function(){
         $form.find("button[type=submit]").removeClass("jdb-hide");
       });
     }
-
-    
-      if (document.getElementById("instagram-frame") !== null) {
-        fetchInsta({
-          accessToken: "1038057777.1677ed0.3947ab2dcea24791b60f6262a81b14f4",
-          target: "#instagram-frame",
-          numOfPics: 4
-        });
-      }
-    
   })();
 });

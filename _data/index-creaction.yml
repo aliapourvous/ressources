@@ -1,0 +1,23 @@
+- name: "Legende urbaines"
+  url: "/artiste-pour-une-cause/creaction/legendes-urbaines"
+  description: ""
+  # form_url: ""
+  thumbnail: "/assets/images/my-life-through-a-lens-11063.jpg"
+
+- name: "Mon dîner chanté"
+  url: "/artiste-pour-une-cause/creaction/mon-diner-chante"
+  description: "#Educationisthekey... Qui ouvre une école ferme une prison - By Victor Hugo"
+  # form_url: ""
+  thumbnail: "/assets/images/mon-diner-chante.jpeg"
+
+- name: "Peace of Art"
+  url: "/artiste-pour-une-cause/creaction/peace-of-art"
+  description: "POA est un programme de sensibilisation et de formation qui œuvre pour la transformation des artistes..."
+  # form_url: ""
+  thumbnail: "/assets/images/peace-of-art.jpeg"
+
+- name: "Un geste, une vie"
+  url: "/artiste-pour-une-cause/creaction/un-geste-une-vie"
+  description: "Faites un geste... C'est pour l'espérance d'une vie."
+  # form_url: ""
+  thumbnail: "/assets/images/un-geste-une-vie-16716174_1015421192355172.jpg"

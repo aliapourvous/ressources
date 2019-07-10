@@ -298,7 +298,7 @@ nav.jdb-navigation.jdb-top .jdb-dropdown-content {
 .jdb-posts__thumbnail:before {
   content: "";
   display: block;
-  padding-top: 53.5%;
+  padding-top: 230px; /*53.5%;*/
 }
 .absolute-bg {
   position: absolute;
@@ -459,6 +459,20 @@ footer .footer__copy {
 .page .mast__container .mast__content .mast__title {
   text-align: center
 }
+
+#section-nav-container .jdb-row-padding a {
+  background-position: center;
+  background-size: cover;
+  border: 10px double #ccc;
+  height: 250px;    
+}
+#section-nav-container .jdb-row-padding a .jdb-display-middle {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 6px 10px;
+  opacity: 0.75;
+}
+
 @media (max-width: 600px) {
   .pagination .pagination__link .pagination__text {
     font-size: 15px;

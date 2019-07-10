@@ -9,7 +9,7 @@
 
         <div class="jdb-posts__header jdb-container jdb-light-gray">
           <p class="jdb-posts__title jdb-xlarge" itemprop="name">
-            <b>{{ item.name }}</b>
+            <strong>{{ item.name }}</strong>
           </p>
           <p class="jdb-posts__text">
             <span itemprop="description">{{ item.description | strip_html | truncatewords: 23, "..." }}</span>{% if page.show_read_more_button %} <div class="read_more_button jdb-right-align"><div class="jdb-button">S'inscrire <i class="fa fa-angle-double-right" aria-hidden="true"></i></div></div>{% endif %}</p>

@@ -1,0 +1,13 @@
+---
+layout: page
+title: "Artiste pour une cause"
+permalink: /artiste-pour-une-cause/
+header_class: jdb-theme
+show_read_more_button: false
+---
+
+<div id="news">
+  {% for item in site.data.index-artistepourunecause %}
+    {% include post-card.html %}
+  {% endfor %}
+</div>

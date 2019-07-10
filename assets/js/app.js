@@ -157,15 +157,5 @@ $(document).ready(function(){
         $form.find("button[type=submit]").removeClass("jdb-hide");
       });
     }
-
-    {% if site.ig_access_token %}
-      if (document.getElementById("instagram-frame") !== null) {
-        fetchInsta({
-          accessToken: "{{ site.ig_access_token }}",
-          target: "#instagram-frame",
-          numOfPics: 4
-        });
-      }
-    {% endif %}
   })();
 });
