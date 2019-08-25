@@ -1,0 +1,7 @@
+_site/
+.DS_Store
+.env
+.s3-website.json
+.sass-cache/
+.jekyll-metadata
+node_modules/
