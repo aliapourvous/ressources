@@ -1,8 +1,14 @@
-# example netlify.toml
 [build]
   command = "jekyll build"
-  #functions = "functions"
-  publish = "./_site"
+  publish = "_site"
+
+[dev] 
+  command = "bundle exec jekyll server --trace" # Command to start your dev server
+  port = 4000 # Port that the dev server will be listening on
+  publish = "." # Folder with the static content for _redirect file
+
+[build.environment]
+  JEKYLL_ENV = "production"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
   ## Not needed for static site generators.
