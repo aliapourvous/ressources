@@ -5,23 +5,37 @@
 [dev] 
   command = "bundle exec jekyll server --trace" # Command to start your dev server
   port = 4000 # Port that the dev server will be listening on
-  publish = "." # Folder with the static content for _redirect file
+  publish = "_site" # Folder with the static content for _redirect file
 
 [build.environment]
   JEKYLL_ENV = "production"
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
-  ## Not needed for static site generators.
-  #[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200
-  
-  ## (optional) Settings for Netlify Dev
-  ## https://github.com/netlify/netlify-dev-plugin#project-detection
-  #[dev] 
-  #  command = "yarn start" # Command to start your dev server
-  #  port = 3000 # Port that the dev server will be listening on
-  #  publish = "dist" # Folder with the static content for _redirect file
-  
-  ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 
+[[redirects]]
+  from = "http://alia-ressources.netlify.com/*"
+  to = "http://ressources.aliapourvous.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/accueil"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://aliapourvous.com/blog:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/a-propos*"
+  to = "https://aliapourvous.com/a-propos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact*"
+  to = "https://aliapourvous.com/contact"
+  status = 301
+  force = true
