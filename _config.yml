@@ -5,13 +5,13 @@ destination         : ./_site
 # authors_dir         : _authors
 # plugins_dir         : _plugins
 layouts_dir         : _layouts
-# data_dir            : _data
+data_dir            : _data
 includes_dir        : _includes
 
 lang        : fr
-encoding    : "utf-8"
+encoding    : utf-8
 name        : Alia Elesse
-title       : "Ressources Aliapourvous"
+title       : Ressources Aliapourvous
 description : >
   Mumpreneur, project Manager, Gospel singer, creating social & cultural project for young people.
 url         : https://www.aliapourvous.com/
@@ -21,7 +21,7 @@ email            : welcome@aliapourvous.com
 google_analytics : # UA-86918712-1
 disqus_id        : aliapourvous
 mailchimp_list   : false # MailChimp list URL
-ig_access_token  : "1038057777.1677ed0.3947ab2dcea24791b60f6262a81b14f4"
+ig_access_token  : 1038057777.1677ed0.3947ab2dcea24791b60f6262a81b14f4
 no_img           : /assets/images/no-image.png
 default_img      : /assets/images/me-161-20140401.jpg
 
@@ -70,7 +70,7 @@ plugins:
 #   compile_in_place: true
 
 assets:
-  prefix: "/assets"
+  prefix: /assets
   sources:
     - _assets/scss
     - _assets/js
@@ -103,7 +103,7 @@ per_page      : 6
 permalink     : /blog/:year/:month/:day/:title/
 paginate_path : /blog/page:num/
 limit         : 6
-# sort_field: 'date'
+# sort_field: date
 # sort_reverse: true
 
 # Collections
@@ -123,10 +123,10 @@ defaults:
       path: ""
       type: category
     values:
-      layout: "category"
+      layout: category
   # All posts
   - scope:
-      path: "_posts"
+      path: _posts
     values:
       layout: post
       noindex: true
@@ -135,7 +135,7 @@ defaults:
       # avatar: /assets/images/avatar1.jpg
   # all pages
   - scope:
-      path: "_pages"
+      path: _pages
     values:
       layout: page
       noindex: true
