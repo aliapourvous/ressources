@@ -18,7 +18,6 @@ url         : https://www.aliapourvous.com/
 
 # Site/SEO settings
 email            : welcome@aliapourvous.com
-google_analytics : # UA-86918712-1
 disqus_id        : aliapourvous
 mailchimp_list   : false # MailChimp list URL
 ig_access_token  : 1038057777.1677ed0.3947ab2dcea24791b60f6262a81b14f4
@@ -44,7 +43,7 @@ netlifycms: true
 # Add GA Id to enable Google Analytics tracking code in production builds
 analytics:
   google:
-    tracking_id: # UA-86918712-1
+    tracking_id: UA-159004386-2
     site_verification: -EhcyrCYQdyvQByapcPz5-8yOB9MWvODyxVAHmIjVGs
 
 # Build settings
@@ -54,7 +53,7 @@ keep_files          : [".git", ".svn"]
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
 markdown            : kramdown
 regenerate          : true
-incremental         : true
+incremental         : false
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
