@@ -2,7 +2,7 @@
   command = "jekyll build"
   publish = "_site"
 
-[dev] 
+[dev]
   command = "bundle exec jekyll server --trace" # Command to start your dev server
   # port = 4000 ## Port that the dev server will be accessible on
   publish = "_site" # Folder with the static content for _redirect file
