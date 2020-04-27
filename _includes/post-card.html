@@ -4,7 +4,7 @@
       <div class="jdb-hover-shadow">
         <div class="jdb-posts__thumbnail jdb-display-container">
           {% assign no_thumbnail = false %}
-          <figure class="absolute-bg" style="background-image:url({% if item.thumbnail %}{{ item.thumbnail }}{% else %}{{ '/assets/images/no-image.png' | prepend: site.baseurl }}{% assign no_thumbnail = true %}{% endif %});{% if no_thumbnail %}background-size:contain!important;background-color:var(--theme-color);{% endif %}"></figure>
+          <figure class="absolute-bg" style="background-image:url({% if item.thumbnail %}{{ item.thumbnail }}{% else %}'/assets/images/no-image.png'{% assign no_thumbnail = true %}{% endif %});{% if no_thumbnail %}background-size:contain!important;background-color:var(--theme-color);{% endif %}"></figure>
         </div>
 
         <div class="jdb-posts__header jdb-container jdb-light-gray">
