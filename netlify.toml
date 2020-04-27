@@ -4,7 +4,7 @@
 
 [dev] 
   command = "bundle exec jekyll server --trace" # Command to start your dev server
-  port = 4000 # Port that the dev server will be listening on
+  # port = 4000 ## Port that the dev server will be accessible on
   publish = "_site" # Folder with the static content for _redirect file
 
 [build.environment]
@@ -17,25 +17,19 @@
   force = true
 
 [[redirects]]
-  from = "/accueil"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/blog/*"
-  to = "https://aliapourvous.com/blog:splat"
+  to = "https://aliapourvous.com/blog/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/a-propos*"
+  from = "/a-propos"
   to = "https://aliapourvous.com/a-propos"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/contact*"
+  from = "/contact"
   to = "https://aliapourvous.com/contact"
   status = 301
   force = true
